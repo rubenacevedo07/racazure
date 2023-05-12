@@ -16,6 +16,23 @@
 
 <script>
 fetch('https://i4i8q5y3g7.execute-api.us-east-2.amazonaws.com/default/racDynamoPython', {mode:'cors'})
+const url = 'https://i4i8q5y3g7.execute-api.us-east-2.amazonaws.com/default/racDynamoPython';
+const origin = 'https://jolly-mud-02edb4803.3.azurestaticapps.net/';
 
+fetch(url, {
+  method: 'GET',
+  headers: {
+    'Origin': origin
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
 </script>
 </html>
